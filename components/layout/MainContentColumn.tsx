@@ -155,7 +155,7 @@ const MainContentColumn: React.FC<MainContentColumnProps> = ({ profile }) => {
                 <img
                   src={selectedCertData.image}
                   alt={selectedCertData.title}
-                  className="w-full max-w-md h-auto rounded-md shadow-md"
+                  className="w-full max-w-md h-auto rounded-md shadow-md hover:scale-150 transition-transform duration-200 cursor-pointer hover:shadow-lg hover:shadow-blue-100"
                 />
               </div>
             )}
