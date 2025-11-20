@@ -1,0 +1,123 @@
+'use client';
+
+import React from 'react';
+import Link from 'next/link';
+import { FileText, Code, Zap, Github, Award } from 'lucide-react';
+import { Profile } from '@/lib/types/model'; 
+import Card from '../ui/CustomCard';
+import TechStackSection from '../sections/TechStackSection';
+import ProjectItem from '../sections/ProjectItem';
+
+interface MainContentColumnProps {
+    profile: Profile;
+}
+
+const MainContentColumn: React.FC<MainContentColumnProps> = ({ profile }) => (
+  <div className="lg:col-span-8 space-y-5">
+    
+    {/* 1. About Section */}
+    <Card title="About" icon={FileText} className="mb-8 hover:shadow-lg hover:shadow-blue-200 transition-shadow duration-200">
+      <div className="space-y-4">
+        <div className="prose prose-sm max-w-none">
+          <p className="text-base leading-relaxed text-gray-900 font-medium">
+            {profile.bioFull && profile.bioFull.split('\n').map((paragraph, idx) => (
+              <React.Fragment key={idx}>
+                {paragraph.trim() && (
+                  <>
+                    {paragraph.trim()}
+                    {idx < (profile.bioFull?.split('\n').length ?? 0) - 1 && <br className="mb-3" />}
+                  </>
+                )}
+              </React.Fragment>
+            ))}
+          </p>
+        </div>
+        <div className="pt-4 border-t border-gray-200">
+          <div className="flex items-start gap-3">
+            <div className="w-1 h-12 bg-linear-to-b from-blue-500 to-blue-300 rounded-full mt-1"></div>
+            <p className="text-sm text-gray-700 italic font-medium leading-relaxed">
+              "Developer who understands the user" - Combining operational expertise with growing development capabilities.
+            </p>
+          </div>
+        </div>
+      </div>
+    </Card>
+    
+    {/* 2. Tech Stack Section */}
+    <Card 
+      title="Tech Stack" 
+      icon={Code} 
+      className="mb-8 hover:shadow-lg hover:shadow-blue-200 transition-all duration-200"
+      buttonText="View All"
+      buttonVariant="fancyLink"
+      buttonHref="/tech-stack"
+    >
+      <TechStackSection title="Frontend" technologies={profile.techStack.frontend} />
+      <TechStackSection title="Backend" technologies={profile.techStack.backend} />
+      <TechStackSection title="DevOps & Cloud" technologies={profile.techStack.devops} />
+    </Card>
+
+    {/* 3. Beyond Coding Section */}
+    <Card title="Beyond Coding" icon={Zap} className="mb-8 hover:shadow-lg hover:shadow-blue-200 transition-shadow duration-200">
+      <div className="space-y-4">
+        <p className="text-base leading-relaxed text-gray-900 font-medium">{profile.beyondCoding}</p>
+        <div className="pt-4 border-t border-gray-200">
+          <div className="inline-flex items-center gap-2 px-3 py-2 bg-blue-50 rounded-lg">
+            <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
+            <span className="text-xs font-semibold text-blue-700">Active in Community & Open Source</span>
+          </div>
+        </div>
+      </div>
+    </Card>
+
+    {/* 4. Recent Projects Section */}
+    <Card 
+      title="Recent Projects" 
+      icon={Github} 
+      className="mb-8 hover:shadow-lg hover:shadow-blue-200 transition-shadow duration-200"
+      buttonText="View All"
+      buttonVariant="fancyLink"
+      buttonHref="/projects"
+    >
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+        {profile.projects.map((item, index) => (
+          <ProjectItem key={index} {...item} />
+        ))}
+      </div>
+    </Card>
+    
+    {/* 5. Recent Certifications Section */}
+    <Card 
+      title="Recent Certifications" 
+      icon={Award}
+      buttonText="View All"
+      buttonVariant="fancyLink"
+      buttonHref="/certificates"
+      className="mb-8 hover:shadow-lg hover:shadow-blue-200 transition-shadow duration-200"
+    >
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+        {profile.certifications.slice(0, 3).map((cert, index) => (
+          <article
+            key={index}
+            className="p-4 bg-white border border-gray-100 rounded-lg shadow-sm hover:shadow-lg hover:shadow-blue-200 transition-shadow duration-150 hover:cursor-pointer"
+            aria-labelledby={`cert-${index}-title`}
+          >
+            <div className="flex items-start gap-3">
+              <div className="flex-1">
+                <h4 id={`cert-${index}-title`} className="text-sm font-semibold text-gray-900">
+                  {cert.title}
+                </h4>
+                <p className="text-xs text-muted-foreground text-blue-600 mt-1">{cert.organization}</p>
+              </div>
+              <div className="text-blue-600 text-sm">🏅</div>
+            </div>
+          </article>
+        ))}
+      </div>
+
+      
+    </Card>
+  </div>
+);
+
+export default MainContentColumn;

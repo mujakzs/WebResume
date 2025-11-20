@@ -1,0 +1,62 @@
+import { Profile, SocialLink } from '@/lib/types/model';
+
+export const profile: Profile = {
+  name: "Andrian M. Gultiano",
+  title: "Computer Engineer",
+  location: "General Santos City, Philippines",
+  number: "+63 967 068 3081",
+  bio: "",
+  bioFull: `I am a highly motivated Computer Engineering graduate with one year of technical support and application development experience, working as an Application Lead under the Supply Chain Execution (SCE) team. In this role, I gained hands-on experience across the full application lifecycle from developing new features and managing data requests to providing essential user support and ensuring the smooth, reliable operation of critical business applications.
+            My professional background has given me a strong understanding of real-world system issues and user-centric solutions. This operational insight now fuels my passion for software and web development. I genuinely enjoy learning new technologies and building small projects to enhance my skills, positioning myself to become a “developer who understands the user.”
+        I am eager to secure a role where I can combine my operational expertise, system troubleshooting skills, and growing development capabilities to deliver high-quality, robust software solutions.`,
+  beyondCoding: "I join online communities and forums to stay updated with the latest trends and best practices in software development. I also participate in coding challenges to sharpen my skills and collaborate with other developers. Additionally, I enjoy mentoring junior developers and contributing to open-source projects whenever possible.",
+  techStack: {
+    frontend: ['Blazor Server', 'Blazor WebAssembly', '.NET MAUI', 'Razor Pages', 'MVC', 'Tailwind CSS', 'MudBlazor', 'Fluent UI','Shadcn', 'JavaScript', 'TypeScript', 'React', 'Vite'],
+    backend: ['ASP.NET Core', 'ASP.NET Web API', 'Signal R', 'Entity Framework Core', 'Dapper', 'Oracle', 'SQL Server', 'MySQL', 'JWT', 'MediatR', 'Restful API'],
+    architecture: ['Clean Architecture', 'Onion Architecture', 'Domain-Driven Design', 'CQRS', 'SOLID'],
+    devops: ['Azure', 'AWS', 'Docker', 'Kubernetes', 'GitHub Actions', 'Azure DevOps', 'CI/CD Pipelines', 'Terraform'],
+    DevTools: ['Visual Studio', 'VS Code', 'JetBrains', 'Git', 'GitHub', 'GitLab', 'Swagger'],
+  },
+  experience: [
+    { title: "Principal AI Engineer", company: "Standard Chartered", years: "2020" },
+    { title: "AI Ops Engineer", company: "Centre of Excellence for GenAI, Cambridge", years: "2025" },
+    { title: "Senior Full-Stack Developer", company: "Core Technology, Cambridge", years: "2024" },
+    { title: "Software Engineering Lead", company: "PocketDevs", years: "2022" },
+    { title: "Lead Application Developer", company: "Bluewind Asia", years: "2021" },
+    { title: "Software Engineer", company: "GCM", years: "2020" },
+    { title: "BS Information Technology", company: "University of San Carlos", years: "2019" },
+  ],
+  projects: [
+    { title: "Coming Soon", description: "Project will be display soon", link: "andrian-gultiano.vercel.app/" },
+    { title: "Coming Soon", description: "Project will be display soon", link: "andrian-gultiano.vercel.app/" },
+    { title: "Coming Soon", description: "Project will be display soon", link: "andrian-gultiano.vercel.app/" },
+    { title: "Coming Soon", description: "Project will be display soon", link: "andrian-gultiano.vercel.app/" },
+  ],
+  certifications: [
+    { title: "Omada Certified Network Administrator (OCNA) Wireless", organization: "TP-Link" },
+    { title: "Google Cybersecurity Specialization ", organization: "Coursera" },
+    { title: "ICT Trends in Cybersecurity and Big Data Analytics", organization: "DICT" },
+    { title: "Cybersecurity Essentials: Combating Cybercrime Effectively", organization: "DICT" },
+  ],
+  recommendation: {
+    quote: "I was just a K-12 undergrad with zero coding experience, but with the guidance of Sir Bryl, I was able to learn and grow exponentially. His mentorship helped me to develop a strong foundation in programming, and I'm now a full-stack developer working freelance...",
+    author: "Jomar Neri",
+    role: "Full-stack Developer, Freelance",
+  },
+  social: {
+    email: "your.email@example.com",
+    linkedin: "yourusername",
+    github: "yourusername",
+    instagram: "yourusername",
+  },
+  membership: [
+    { name: "Analytics & Artificial Intelligence Association of the Philippines (AAI)", link: "#" },
+    { name: "Philippine Software Industry Association", link: "#" },
+  ]
+};
+
+export const socialLinksData: SocialLink[] = [
+    { name: 'LinkedIn', iconName: 'linkedin', link: `https://linkedin.com/in/${profile.social.linkedin}` },
+    { name: 'GitHub', iconName: 'github', link: `https://github.com/${profile.social.github}` },
+    { name: 'Instagram', iconName: 'instagram', link: `https://instagram.com/${profile.social.instagram}` },
+];
