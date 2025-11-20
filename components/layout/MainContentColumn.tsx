@@ -8,6 +8,7 @@ import Card from '../ui/CustomCard';
 import TechStackSection from '../sections/TechStackSection';
 import ProjectItem from '../sections/ProjectItem';
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from '@/components/ui/dialog';
+import { Avatar, AvatarImage } from '../ui/avatar';
 
 interface MainContentColumnProps {
     profile: Profile;
@@ -147,10 +148,55 @@ const MainContentColumn: React.FC<MainContentColumnProps> = ({ profile }) => {
               <div className="text-3xl"></div>
               <p className="text-sm font-semibold text-gray-900">Certification Details</p>
             </div>
+
+            {/* Certificate image */}
+            {selectedCertData?.image && (
+              <div className="w-full flex justify-center">
+                <img
+                  src={selectedCertData.image}
+                  alt={selectedCertData.title}
+                  className="w-full max-w-md h-auto rounded-md shadow-md"
+                />
+              </div>
+            )}
+
+            {/* Key metadata */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              <div>
+                <p className="text-xs text-muted-foreground">Organization</p>
+                <p className="text-sm font-semibold text-gray-900">{selectedCertData?.organization}</p>
+              </div>
+              <div>
+                <p className="text-xs text-muted-foreground">Issued</p>
+                <p className="text-sm font-semibold text-gray-900">{selectedCertData?.issued ?? '—'}</p>
+              </div>
+              <div>
+                <p className="text-xs text-muted-foreground">Expires</p>
+                <p className="text-sm font-semibold text-gray-900">{selectedCertData?.expires ?? '—'}</p>
+              </div>
+              <div>
+                <p className="text-xs text-muted-foreground">Credential ID</p>
+                <p className="text-sm font-mono text-gray-900">{selectedCertData?.credentialId ?? '—'}</p>
+              </div>
+            </div>
+
+            {/* Description & external link */}
             <p className="text-base text-gray-700 leading-relaxed font-medium">
-              This certification was issued by <strong>{selectedCertData?.organization}</strong>. 
-              You can add more details here as needed.
+              This certification was issued by <strong>{selectedCertData?.organization}</strong>.
             </p>
+
+            {selectedCertData?.url && (
+              <div className="pt-2">
+                <a
+                  href={selectedCertData.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-sm text-blue-600 font-semibold underline"
+                >
+                  View issuer / verification page
+                </a>
+              </div>
+            )}
           </div>
         </DialogContent>
       </Dialog>

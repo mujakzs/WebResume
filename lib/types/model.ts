@@ -4,6 +4,11 @@ import { LucideIcon } from 'lucide-react';
 export interface Certification {
   title: string;
   organization: string;
+  image?: string; // relative path under /public/images/
+  issued?: string;
+  expires?: string;
+  credentialId?: string;
+  url?: string; // external verification or issuer link
 }
 
 export interface Project {
