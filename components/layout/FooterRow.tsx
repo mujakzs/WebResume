@@ -42,38 +42,38 @@ const FooterRow: React.FC<FooterRowProps> = ({ profile, socialLinks }) => (
 
     {/* 11. Contact Quick Links (Col 3) */}
     <Card title="Contact" icon={Mail} className="mb-0 hover:shadow-lg hover:shadow-blue-200 transition-shadow duration-200!">
-      <div className="flex flex-col space-y-4">
-        {/* Email Section */}
-        <div className="border-2 border-gray-200 rounded-lg p-4 hover:border-blue-300 hover:bg-blue-50 hover:shadow-md transition-all duration-200 group">
-          <p className="font-bold text-gray-900 text-xs uppercase tracking-wider">📧 Email</p>
+      <div className="flex flex-col space-y-3">
+        {/* Email Section (smaller) */}
+        <div className="border border-gray-200 rounded-lg p-3 hover:border-blue-300 hover:bg-blue-50 hover:shadow-sm transition-all duration-150 group">
+          <p className="font-semibold text-gray-900 text-[11px] uppercase tracking-wide">Email</p>
           <a 
             href={`mailto:${profile.social.email}`} 
-            className="text-blue-600 hover:text-blue-800 font-semibold text-sm mt-2 inline-block group-hover:underline transition-all"
+            className="text-blue-600 hover:text-blue-800 font-medium text-xs mt-1 inline-block group-hover:underline transition-all"
           >
             {profile.social.email}
           </a>
         </div>
         
-        {/* Phone Section */}
-        <div className="border-2 border-gray-200 rounded-lg p-4 hover:border-blue-300 hover:bg-blue-50 hover:shadow-md transition-all duration-200 group hover:cursor-pointer">
-          <p className="font-bold text-gray-900 text-xs uppercase tracking-wider">📱 Phone</p>
+        {/* Phone Section (smaller) */}
+        <div className="border border-gray-200 rounded-lg p-3 hover:border-blue-300 hover:bg-blue-50 hover:shadow-sm transition-all duration-150 group">
+          <p className="font-semibold text-gray-900 text-[11px] uppercase tracking-wide">Phone</p>
           <a 
             href={`tel:${profile.number}`} 
-            className="text-blue-600 hover:text-blue-800 font-semibold text-sm mt-2 inline-block group-hover:underline transition-all hover:cursor-pointer"
+            className="text-blue-600 hover:text-blue-800 font-medium text-xs mt-1 inline-block group-hover:underline transition-all"
           >
             {profile.number}
           </a>
         </div>
 
-        {/* CTA Buttons */}
-        <div className="pt-2 space-y-3">
-          <button className="w-full flex items-center justify-center gap-2 px-4 py-3 bg-blue-600 text-white font-bold rounded-lg shadow-md hover:bg-blue-700 hover:shadow-lg hover:shadow-blue-300 transition-all duration-200 group hover:cursor-pointer">
+        {/* CTA Buttons (smaller) */}
+        <div className="pt-1 space-y-2">
+          <button className="w-full flex items-center justify-center gap-2 px-3 py-2 bg-blue-600 text-white font-semibold rounded-md shadow-sm hover:bg-blue-700 hover:shadow-md transition-all duration-150 group">
             <ExternalLink className="w-4 h-4 group-hover:scale-110 transition-transform" />
             Let's Connect
           </button>
-          <button className="w-full flex items-center justify-center gap-2 px-4 py-3 bg-white text-blue-600 font-bold rounded-lg border-2 border-blue-400 hover:bg-blue-50 hover:shadow-md transition-all duration-200 group hover:cursor-pointer">
+          <button className="w-full flex items-center justify-center gap-2 px-3 py-2 bg-white text-blue-600 font-semibold rounded-md border border-blue-300 hover:bg-blue-50 hover:shadow-sm transition-all duration-150 group">
             <Mail className="w-4 h-4 group-hover:scale-110 transition-transform" />
-            Send Message
+            Send
           </button>
         </div>
       </div>

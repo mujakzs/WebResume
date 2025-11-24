@@ -10,13 +10,6 @@ const ExperienceItem: React.FC<Experience> = ({ title, company, years, current }
         ? 'bg-blue-500 border-2 border-blue-600 shadow-lg shadow-blue-300 animate-pulse' 
         : 'bg-white border-2 border-gray-400 group-hover:border-blue-400'
     }`}></div>
-
-    {/* Current badge */}
-    {current && (
-      <div className="absolute -left-12 top-2 bg-blue-600 text-white text-xs font-bold px-2 py-1 rounded-full whitespace-nowrap shadow-md">
-        Current
-      </div>
-    )}
     
     <div className="flex justify-between items-start">
       <div className="flex-1">

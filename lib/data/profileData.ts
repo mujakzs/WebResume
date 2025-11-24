@@ -155,7 +155,6 @@ export const profile: Profile = {
 };
 
 export const socialLinksData: SocialLink[] = [
-    { name: 'LinkedIn', iconName: 'linkedin', link: `https://www.linkedin.com/in/${profile.social.linkedin}` },
-    { name: 'GitHub', iconName: 'github', link: `https://github.com/${profile.social.github}` },
-    { name: 'Instagram', iconName: 'instagram', link: `https://www.instagram.com/${profile.social.instagram}` },
+  { name: 'LinkedIn', iconName: 'linkedin', link: `https://www.linkedin.com/in/${profile.social.linkedin}` },
+  { name: 'GitHub', iconName: 'github', link: `https://github.com/${profile.social.github}` },
 ];
