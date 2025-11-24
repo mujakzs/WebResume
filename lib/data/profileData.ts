@@ -146,19 +146,19 @@ export const profile: Profile = {
     role: "Full-stack Developer, Freelance",
   },
   social: {
-    email: "your.email@example.com",
-    linkedin: "yourusername",
-    github: "yourusername",
-    instagram: "yourusername",
+    email: "andriangultiano14@gmail.com",
+    linkedin: "andrian4",
+    github: "mujakzs",
+    instagram: "mujakzs",
   },
   membership: [
-    { name: "Analytics & Artificial Intelligence Association of the Philippines (AAI)", link: "#" },
-    { name: "Philippine Software Industry Association", link: "#" },
+    { name: "Institute of Computer Engineers of the Philippines (ICPEP)", link: "https://cpecb.org.ph/" },
+    { name: "Philippine Software Industry Association", link: "https://www.psia.org.ph/" },
   ]
 };
 
 export const socialLinksData: SocialLink[] = [
-    { name: 'LinkedIn', iconName: 'linkedin', link: `https://linkedin.com/in/${profile.social.linkedin}` },
+    { name: 'LinkedIn', iconName: 'linkedin', link: `https://www.linkedin.com/in/${profile.social.linkedin}` },
     { name: 'GitHub', iconName: 'github', link: `https://github.com/${profile.social.github}` },
-    { name: 'Instagram', iconName: 'instagram', link: `https://instagram.com/${profile.social.instagram}` },
+    { name: 'Instagram', iconName: 'instagram', link: `https://www.instagram.com/${profile.social.instagram}` },
 ];

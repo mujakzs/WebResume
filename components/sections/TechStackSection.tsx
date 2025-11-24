@@ -19,7 +19,7 @@ const TechStackSection: React.FC<TechStackSectionProps> = ({ title, technologies
           <Badge
             key={tech}
             variant="outline"
-            className="w-full justify-center px-3 py-1 text-sm hover:scale-105 transform-gpu transition duration-150"
+            className="w-full justify-center px-3 py-1 text-sm hover:scale-105 transform-gpu transition duration-150 "
             title={tech}
             aria-label={`Technology: ${tech}`}
           >
