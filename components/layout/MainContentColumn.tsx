@@ -72,18 +72,7 @@ const MainContentColumn: React.FC<MainContentColumnProps> = ({ profile }) => {
         <TechStackSection title="DevOps & Cloud" technologies={profile.techStack.devops} />
       </Card>
 
-      {/* 3. Beyond Coding Section */}
-      <Card title="Beyond Coding" icon={Zap} className="mb-8 hover:shadow-lg hover:shadow-blue-200 transition-shadow duration-200">
-        <div className="space-y-4">
-          <p className="text-base leading-relaxed text-gray-900 font-medium">{profile.beyondCoding}</p>
-          <div className="pt-4 border-t border-gray-200">
-            <div className="inline-flex items-center gap-2 px-3 py-2 bg-blue-50 rounded-lg">
-              <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
-              <span className="text-xs font-semibold text-blue-700">Active in Community & Open Source</span>
-            </div>
-          </div>
-        </div>
-      </Card>
+      
 
       {/* 4. Recent Projects Section */}
       <Card 
@@ -200,6 +189,20 @@ const MainContentColumn: React.FC<MainContentColumnProps> = ({ profile }) => {
           </div>
         </DialogContent>
       </Dialog>
+
+
+      {/* 3. Beyond Coding Section */}
+      <Card title="Beyond Coding" icon={Zap} className="mb-8 hover:shadow-lg hover:shadow-blue-200 transition-shadow duration-200">
+        <div className="space-y-4">
+          <p className="text-base leading-relaxed text-gray-900 font-medium">{profile.beyondCoding}</p>
+          <div className="pt-4 border-t border-gray-200">
+            <div className="inline-flex items-center gap-2 px-3 py-2 bg-blue-50 rounded-lg">
+              <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
+              <span className="text-xs font-semibold text-blue-700">Active in Community & Open Source</span>
+            </div>
+          </div>
+        </div>
+      </Card>
     </div>
   );
 };
