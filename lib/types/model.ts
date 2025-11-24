@@ -21,6 +21,7 @@ export interface Experience {
   title: string;
   company: string;
   years: string;
+  current?: boolean; // marks if this is the current role
 }
 
 export interface SocialLink {

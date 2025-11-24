@@ -13,16 +13,6 @@ interface SidebarColumnProps {
 const SidebarColumn: React.FC<SidebarColumnProps> = ({ profile }) => (
   <div className="lg:col-span-4 space-y-8">
 
-    {/* Badge Placeholder (I'M PART OF PH 100) */}
-    <div className="p-6 bg-linear-to-r from-purple-600 to-blue-600 border-2 border-purple-400 rounded-xl text-center shadow-lg hover:shadow-2xl hover:shadow-purple-300 transition-all duration-300 transform hover:scale-105 text-white group cursor-pointer">
-      <div className="flex items-center justify-center gap-2 mb-2">
-        <Sparkles className="w-5 h-5 group-hover:animate-pulse" />
-        <h3 className="text-lg font-black tracking-wide">I'M PART OF PH 100</h3>
-        <Sparkles className="w-5 h-5 group-hover:animate-pulse" />
-      </div>
-      <p className="text-sm font-semibold mt-2">The PH100 highlights the brightest minds under 30 in the Philippines.</p>
-    </div>
-
     {/* 6. Experience Section */}
     <Card title="Experience" icon={Briefcase} className="hover:shadow-lg hover:shadow-blue-200 transition-shadow duration-200">
       <div className="space-y-2">
@@ -31,7 +21,7 @@ const SidebarColumn: React.FC<SidebarColumnProps> = ({ profile }) => (
         ))}
       </div>
       <div className="mt-4 pt-4 border-t border-gray-200">
-        <ExperienceItem title="Hello World! ✌️" company="Wrote my first line of code" years="2015" />
+        <ExperienceItem title="Hello World! ✌️" company="Wrote my first line of code" years="2019" />
       </div>
     </Card>
 

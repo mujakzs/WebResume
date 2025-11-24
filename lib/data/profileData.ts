@@ -18,13 +18,10 @@ export const profile: Profile = {
     DevTools: ['Visual Studio', 'VS Code', 'JetBrains', 'Git', 'GitHub', 'GitLab', 'Swagger'],
   },
   experience: [
-    { title: "Principal AI Engineer", company: "Standard Chartered", years: "2020" },
-    { title: "AI Ops Engineer", company: "Centre of Excellence for GenAI, Cambridge", years: "2025" },
-    { title: "Senior Full-Stack Developer", company: "Core Technology, Cambridge", years: "2024" },
-    { title: "Software Engineering Lead", company: "PocketDevs", years: "2022" },
-    { title: "Lead Application Developer", company: "Bluewind Asia", years: "2021" },
-    { title: "Software Engineer", company: "GCM", years: "2020" },
-    { title: "BS Information Technology", company: "University of San Carlos", years: "2019" },
+    { title: "Application Lead", company: "KCC Malls", years: "2025", current: true },
+    { title: "Full Stack Developer", company: "Rapid Signal Electronics", years: "2024" },
+    { title: "Technical Support Intern", company: "Martronix Digital System and Technology Solutions", years: "2023" },
+    { title: "BS Computer Engineering", company: "Notre Dame of Dadiangas University", years: "2021" },
   ],
   projects: [
     { title: "Coming Soon", description: "Project will be display soon", link: "andrian-gultiano.vercel.app/" },
