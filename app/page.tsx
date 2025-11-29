@@ -7,8 +7,8 @@ import { profile, socialLinksData } from '@/lib/data/profileData';
 
 export default function Page() {
   return (
-    <main className="container mx-auto px-4 py-8 min-h-screen bg-gray-50">
-      <div className="max-w-7xl mx-auto">
+    <main className="container mx-auto px-4 py-8 min-h-screen animate-page bg-gray-50">
+      <div className="max-w-7xl mx-auto animate-fade-up">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
           {/* Profile Header */}
           <ProfileHeader profile={profile} />

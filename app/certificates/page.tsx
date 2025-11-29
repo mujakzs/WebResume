@@ -28,7 +28,7 @@ export default function CertificatesPage() {
     .sort((a, b) => parseDate(b.issued).getTime() - parseDate(a.issued).getTime())
 
   return (
-    <main className="max-w-4xl mx-auto py-12 px-4">
+    <main className="max-w-4xl mx-auto py-12 px-4 min-h-screen animate-page">
       <div className="flex items-center justify-between mb-6">
         <div className="flex items-center gap-4">
           <Link href="/" className="inline-flex items-center gap-2 text-sm text-primary hover:decoration-blue-600 hover:drop-shadow-[0_1px_2px_rgba(59,130,246,0.6)]">
@@ -42,7 +42,7 @@ export default function CertificatesPage() {
       {otherCerts.length > 0 && (
         <div className="mb-8">
           <h2 className="text-xl font-semibold mb-4 text-gray-900">Professional & Training Certificates</h2>
-          <div className="bg-white shadow-sm rounded-lg p-6 bg-card text-card-foreground hover:shadow-lg hover:shadow-blue-200 transition-shadow duration-200">
+          <div className="bg-white shadow-sm rounded-lg p-6 bg-card text-card-foreground hover:shadow-lg hover:shadow-blue-200 transition-shadow duration-200 animate-fade-up">
             <CertificateItem certifications={otherCerts} />
           </div>
         </div>
@@ -52,7 +52,7 @@ export default function CertificatesPage() {
       {programmingCerts.length > 0 && (
         <div>
           <h2 className="text-xl font-semibold mb-4 text-gray-900">Programming Certificates</h2>
-          <div className="bg-white shadow-sm rounded-lg p-6 bg-card text-card-foreground hover:shadow-lg hover:shadow-blue-200 transition-shadow duration-200">
+          <div className="bg-white shadow-sm rounded-lg p-6 bg-card text-card-foreground hover:shadow-lg hover:shadow-blue-200 transition-shadow duration-200 animate-fade-up">
             <CertificateItem certifications={programmingCerts} />
           </div>
         </div>
