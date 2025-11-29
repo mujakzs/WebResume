@@ -25,7 +25,9 @@ export default function RootLayout({
       <body
         className={`${font.className} antialiased`}
       >
-        {children}
+        <div className="min-h-screen animate-page">
+          {children}
+        </div>
       </body>
     </html>
   );

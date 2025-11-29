@@ -44,6 +44,19 @@ export interface Profile {
   projects: Project[];
   certifications: Certification[];
   recommendation: { quote: string; author: string; role: string };
+  skills?: {
+    level?: string; // e.g. "Junior-level programmer"
+    technical?: string[];
+    soft?: string[];
+  };
+  references?: {
+    name: string;
+    role?: string;
+    organization?: string;
+    phone?: string;
+    email?: string;
+    link?: string; // LinkedIn or other profile
+  }[];
   social: { email: string; linkedin: string; github: string; instagram: string };
   membership: { name: string; link: string }[];
 }

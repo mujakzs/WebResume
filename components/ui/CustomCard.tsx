@@ -27,7 +27,7 @@ const CustomCard: React.FC<CustomCardProps> = ({
   buttonHref,
   buttonVariant,
 }) => (
-  <ShadcnCard className={className}>
+  <ShadcnCard className={`animate-fade-up ${className}`}>
     {title && (
       <CardHeader>
         <div className="flex items-center justify-between w-full">

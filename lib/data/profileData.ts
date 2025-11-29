@@ -12,7 +12,7 @@ export const profile: Profile = {
   beyondCoding: "I join online communities and forums to stay updated with the latest trends and best practices in software development. I also participate in coding challenges to sharpen my skills and collaborate with other developers. Additionally, I enjoy mentoring junior developers and contributing to open-source projects whenever possible.",
   techStack: {
     frontend: ['Blazor Server', 'Blazor WebAssembly', '.NET MAUI', 'Razor Pages', 'MVC', 'Tailwind CSS', 'MudBlazor', 'Fluent UI','Shadcn', 'JavaScript', 'TypeScript', 'React', 'Vite'],
-    backend: ['ASP.NET Core', 'ASP.NET Web API', 'Signal R', 'Entity Framework Core', 'Dapper', 'Oracle', 'SQL Server', 'MySQL', 'JWT', 'MediatR', 'Restful API'],
+    backend: ['ASP.NET Core', 'ASP.NET Web API', 'Signal R', 'Entity Framework Core', 'Dapper', 'Oracle', 'SQL Server', 'MySQL', 'JWT', 'MediatR', 'Restful API', 'BCrypt'],
     architecture: ['Clean Architecture', 'Onion Architecture', 'Domain-Driven Design', 'CQRS', 'SOLID'],
     devops: ['Azure', 'AWS', 'Docker', 'Kubernetes', 'GitHub Actions', 'Azure DevOps', 'CI/CD Pipelines', 'Terraform'],
     DevTools: ['Visual Studio', 'VS Code', 'JetBrains', 'Git', 'GitHub', 'GitLab', 'Swagger'],
@@ -142,6 +142,30 @@ export const profile: Profile = {
     author: "Jomar Neri",
     role: "Full-stack Developer, Freelance",
   },
+  skills: {
+    level: 'Junior-level programmer',
+    technical: [
+      'C#', 'Asp.net', 'TypeScript', 'React', 'PL/SQL', 'HTML', 'CSS', 'Blazor', 'Git'
+    ],
+    soft: [
+      'Communication', 'Problem Solving', 'Teamwork', 'Time Management', 'Adaptability', 'Mentoring', 'Attention to Detail'
+    ]
+  },
+    references: [
+      {
+        name: 'Engr. Ryan Olaybal',
+        role: 'College Faculty',
+        organization: 'Notre Dame of Dadiangas University',
+        phone: '09424966661',
+        email: 'oracleraja@gmail.com'
+      },
+      {
+        name: 'Engr. Franz Duran',
+        role: 'CEO / Project Manager',
+        organization: 'Rapid Signal Electronics',
+        link: 'https://www.linkedin.com/in/engr-franz-duran'
+      }
+    ],
   social: {
     email: "andriangultiano14@gmail.com",
     linkedin: "andrian4",

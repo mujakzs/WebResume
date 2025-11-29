@@ -55,3 +55,37 @@
     color: hsl(var(--foreground));
   }
 }
+
+/* Page & section animations */
+@media (prefers-reduced-motion: no-preference) {
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(10px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+  }
+
+  .animate-page {
+    animation: fadeIn 420ms cubic-bezier(.2,.9,.2,1) both;
+  }
+
+  .animate-fade-up {
+    animation: fadeUp 420ms cubic-bezier(.2,.9,.2,1) both;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-page, .animate-fade-up { animation: none !important; }
+}
+
+/* small utility for staggering children using CSS variable */
+.animate-stagger > * {
+  opacity: 0;
+  transform: translateY(6px);
+  animation: fadeUp 420ms cubic-bezier(.2,.9,.2,1) both;
+  animation-delay: calc(var(--index) * 80ms);
+}
+
