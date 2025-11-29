@@ -150,7 +150,6 @@ export const profile: Profile = {
   },
   membership: [
     { name: "Institute of Computer Engineers of the Philippines (ICPEP)", link: "https://cpecb.org.ph/" },
-    { name: "Philippine Software Industry Association", link: "https://www.psia.org.ph/" },
   ]
 };
 
