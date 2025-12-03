@@ -13,6 +13,9 @@ const font = Rajdhani({
 export const metadata: Metadata = {
   title: "Andrian Gultiano - Computer Engineer",
   description: "Andrian Gultiano",
+  icons: {
+    icon: "/favicon.ico",
+  },
 };
 
 export default function RootLayout({
