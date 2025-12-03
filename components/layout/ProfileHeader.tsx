@@ -1,6 +1,6 @@
 'use client';
 
-import React from 'react';
+import React, { useState } from 'react';
 import { MapPin, Calendar, Mail, BadgeCheck, Users, PhoneCall, Phone } from 'lucide-react';
 import { Profile } from '@/lib/types/model';
 import { Button } from '../ui/button';
@@ -10,12 +10,38 @@ interface ProfileHeaderProps {
   profile: Profile;
 }
 
-const ProfileHeader: React.FC<ProfileHeaderProps> = ({ profile }) => (
+const ProfileHeader: React.FC<ProfileHeaderProps> = ({ profile }) => {
+  const [avatarImage, setAvatarImage] = useState('/images/1x1.png');
+  const [isClicked, setIsClicked] = useState(false);
+
+  const handleAvatarHover = () => {
+    if (!isClicked) {
+      setAvatarImage('/images/muj.png');
+    }
+  };
+
+  const handleAvatarHoverEnd = () => {
+    if (!isClicked) {
+      setAvatarImage('/images/1x1.png');
+    }
+  };
+
+  const handleAvatarClick = () => {
+    setIsClicked(!isClicked);
+    setAvatarImage(!isClicked ? '/images/ands.png' : '/images/1x1.png');
+  };
+
+  return (
   <div className="lg:col-span-12 flex flex-col md:flex-row items-start md:items-center space-y-4 md:space-y-0 md:space-x-8 pb-4">
     {/* Profile Image & Info */}
     <div className="flex items-start space-x-4">
-      <Avatar className="w-30 h-30 border-4te shadow-md hover:shadow-xl hover:shadow-blue-200 transition-all duration-200 rounded-lg cursor-pointer">
-        <AvatarImage src="/images/1x1.png" alt={profile.name} />
+      <Avatar 
+        className="w-30 h-30 border-4te shadow-md hover:shadow-xl hover:shadow-blue-200 transition-all duration-200 rounded-lg cursor-pointer"
+        onMouseEnter={handleAvatarHover}
+        onMouseLeave={handleAvatarHoverEnd}
+        onClick={handleAvatarClick}
+      >
+        <AvatarImage src={avatarImage} alt={profile.name} />
         <AvatarFallback>
           {profile.name.split(' ').map((n) => n[0]).join('')}
         </AvatarFallback>
@@ -65,6 +91,7 @@ const ProfileHeader: React.FC<ProfileHeaderProps> = ({ profile }) => (
       </Button>
     </div>
   </div>
-);
+  );
+};
 
 export default ProfileHeader;
