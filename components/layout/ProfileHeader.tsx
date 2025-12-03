@@ -37,11 +37,11 @@ const ProfileHeader: React.FC<ProfileHeaderProps> = ({ profile }) => {
     <div className="flex items-start space-x-4">
       <Avatar 
         className="w-30 h-30 border-4te shadow-md hover:shadow-xl hover:shadow-blue-200 transition-all duration-200 rounded-lg cursor-pointer"
-        onMouseEnter={handleAvatarHover}
-        onMouseLeave={handleAvatarHoverEnd}
-        onClick={handleAvatarClick}
+        // onMouseEnter={handleAvatarHover}
+        // onMouseLeave={handleAvatarHoverEnd}
+        // onClick={handleAvatarClick}
       >
-        <AvatarImage src={avatarImage} alt={profile.name} />
+        <AvatarImage src="/images/1x1.png" alt={profile.name} />
         <AvatarFallback>
           {profile.name.split(' ').map((n) => n[0]).join('')}
         </AvatarFallback>
