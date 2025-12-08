@@ -1,16 +1,18 @@
 'use client';
 
 import React from 'react';
-import { Briefcase, Award, Mic, ExternalLink, Sparkles, ArrowRight } from 'lucide-react';
-import { Profile } from '@/lib/types/model';
+import { Briefcase, Award, Mic, ExternalLink, Sparkles, ArrowRight, Link as LinkIcon } from 'lucide-react';
+import { Profile, SocialLink } from '@/lib/types/model';
 import Card from '../ui/CustomCard';
 import ExperienceItem from '../sections/ExperienceItem';
+import SocialLinkItem from '../sections/SocialLinkItem';
 
 interface SidebarColumnProps {
     profile: Profile;
+    socialLinks: SocialLink[];
 }
 
-const SidebarColumn: React.FC<SidebarColumnProps> = ({ profile }) => (
+const SidebarColumn: React.FC<SidebarColumnProps> = ({ profile, socialLinks }) => (
   <div className="lg:col-span-4 space-y-8">
 
     {/* 6. Experience Section */}
@@ -22,6 +24,15 @@ const SidebarColumn: React.FC<SidebarColumnProps> = ({ profile }) => (
       </div>
       <div className="mt-4 pt-4 border-t border-gray-200">
         <ExperienceItem title="Hello World! ✌️" company="Wrote my first line of code" years="2019" />
+      </div>
+    </Card>
+
+    {/*Social Links (Col 2) */}
+    <Card title="Social Links" icon={LinkIcon} className="hover:shadow-lg hover:shadow-blue-200 transition-shadow duration-200!">
+      <div className="space-y-2">
+        {socialLinks.map(item => (
+          <SocialLinkItem key={item.name} name={item.name} link={item.link} iconName={item.iconName} />
+        ))}
       </div>
     </Card>
 
@@ -58,27 +69,6 @@ const SidebarColumn: React.FC<SidebarColumnProps> = ({ profile }) => (
               </span>
             ))}
           </div>
-        </div>
-      </div>
-    </Card>
-    
-    {/* 8. References Section */}
-    <Card title="References" icon={ExternalLink} className="mb-0 hover:shadow-lg hover:shadow-blue-200 transition-shadow duration-200">
-      <div className="space-y-3">
-        <div className="grid grid-cols-1 gap-3">
-          {profile.references?.map((ref, i) => (
-            <div key={i} className="flex flex-col sm:flex-row sm:justify-between gap-2 p-3 bg-white border border-gray-100 rounded-md shadow-sm hover:shadow-md transition">
-              <div>
-                <p className="font-semibold text-gray-900">{ref.name}</p>
-                <p className="text-sm text-gray-600">{ref.role}{ref.organization ? ` - ${ref.organization}` : ''}</p>
-              </div>
-              <div className="text-sm text-gray-700 flex flex-col items-start sm:items-end">
-                {ref.phone && <a href={`tel:${ref.phone}`} className="font-medium text-blue-600 hover:underline">{ref.phone}</a>}
-                {ref.email && <a href={`mailto:${ref.email}`} className="text-xs text-gray-600 hover:underline mt-1">{ref.email}</a>}
-                {ref.link && <a href={ref.link} target="_blank" rel="noopener noreferrer" className="text-xs text-blue-600 hover:underline mt-1">{ref.link.replace('https://', '')}</a>}
-              </div>
-            </div>
-          ))}
         </div>
       </div>
     </Card>

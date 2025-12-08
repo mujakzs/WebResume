@@ -17,10 +17,10 @@ export default function Page() {
           <MainContentColumn profile={profile} />
 
           {/* Sidebar Column */}
-          <SidebarColumn profile={profile} />
+          <SidebarColumn profile={profile} socialLinks={socialLinksData}/>
 
           {/* Footer Row */}
-          <FooterRow profile={profile} socialLinks={socialLinksData} />
+          <FooterRow profile={profile} />
         </div>
       </div>
     </main>

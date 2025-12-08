@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
-import { MapPin, Calendar, Mail, BadgeCheck, Users, PhoneCall, Phone } from 'lucide-react';
+import { MapPin, Calendar, FileUser, BadgeCheck, Users, PhoneCall, Phone } from 'lucide-react';
 import { Profile } from '@/lib/types/model';
 import { Button } from '../ui/button';
 import { Avatar, AvatarImage, AvatarFallback } from '../ui/avatar';
@@ -78,8 +78,8 @@ const ProfileHeader: React.FC<ProfileHeaderProps> = ({ profile }) => {
         size="lg"
         className="gap-2 hover:scale-105 cursor-pointer hover:shadow-lg hover:shadow-blue-200 transition-all duration-200 rounded-lg"
       >
-        <Mail className="w-4 h-4" />
-        Send Email
+        <FileUser className="w-4 h-4" />
+        View Resume
       </Button>
       <Button
         variant="outline"

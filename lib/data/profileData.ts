@@ -21,7 +21,7 @@ export const profile: Profile = {
     { title: "Application Lead", company: "KCC Malls", years: "2025", current: true },
     { title: "Full Stack Developer", company: "Rapid Signal Electronics", years: "2024" },
     { title: "Technical Support Intern", company: "Martronix Digital System and Technology Solutions", years: "2023" },
-    { title: "BS Computer Engineering", company: "Notre Dame of Dadiangas University", years: "2021" },
+    { title: "BS Computer Engineering", company: "Notre Dame of Dadiangas University", years: "2020" },
   ],
   projects: [
     { title: "Coming Soon", description: "Project will be display soon", link: "andrian-gultiano.vercel.app/" },
