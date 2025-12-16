@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import { MapPin, Calendar, FileUser, BadgeCheck, Users, PhoneCall } from 'lucide-react';
 import { Profile } from '@/lib/types/model';
 import { Button } from '../ui/button';
@@ -22,24 +22,6 @@ interface ProfileHeaderProps {
 }
 
 const ProfileHeader: React.FC<ProfileHeaderProps> = ({ profile }) => {
-  const [avatarImage, setAvatarImage] = useState('/images/1x1.png');
-  const [isClicked, setIsClicked] = useState(false);
-
-  /* =======================
-     Avatar Handlers
-  ======================= */
-  const handleAvatarHover = () => {
-    if (!isClicked) setAvatarImage('/images/muj.png');
-  };
-
-  const handleAvatarHoverEnd = () => {
-    if (!isClicked) setAvatarImage('/images/1x1.png');
-  };
-
-  const handleAvatarClick = () => {
-    setIsClicked(!isClicked);
-    setAvatarImage(!isClicked ? '/images/ands.png' : '/images/1x1.png');
-  };
 
   /* =======================
      Load Calendly Script
@@ -81,12 +63,9 @@ const ProfileHeader: React.FC<ProfileHeaderProps> = ({ profile }) => {
       ======================= */}
       <div className="flex items-start space-x-4">
         <Avatar
-          className="w-30 h-30 shadow-md hover:shadow-xl hover:shadow-blue-200 transition-all duration-200 rounded-lg cursor-pointer"
-          onMouseEnter={handleAvatarHover}
-          onMouseLeave={handleAvatarHoverEnd}
-          onClick={handleAvatarClick}
+          className="w-30 h-30 shadow-md hover:shadow-xl hover:shadow-blue-200 transition-all duration-200 rounded-lg"
         >
-          <AvatarImage src={avatarImage} alt={profile.name} />
+          <AvatarImage src="/images/1x1.png" alt={profile.name} />
           <AvatarFallback>
             {profile.name.split(' ').map(n => n[0]).join('')}
           </AvatarFallback>
