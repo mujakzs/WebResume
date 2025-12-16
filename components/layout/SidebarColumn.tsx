@@ -49,7 +49,7 @@ const SidebarColumn: React.FC<SidebarColumnProps> = ({ profile, socialLinks }) =
 
         {/* Technical skills */}
         <div>
-          <p className="text-sm text-muted-foreground mb-2 font-medium">Technical</p>
+          <p className="text-sm text-muted-foreground mb-2 font-medium">Programming Languages</p>
           <div className="flex flex-wrap gap-2">
             {profile.skills?.technical?.map((skill, i) => (
               <span key={i} className="text-xs px-2 py-1 bg-gray-100 text-gray-800 rounded-md font-medium hover:bg-blue-50 hover:text-blue-700 transition">

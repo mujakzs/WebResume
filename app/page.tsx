@@ -18,7 +18,7 @@ export default function Page() {
 
           {/* Sidebar Column */}
           <SidebarColumn profile={profile} socialLinks={socialLinksData}/>
-
+          <hr className='w-7xl' />
           {/* Footer Row */}
           <FooterRow profile={profile} />
         </div>

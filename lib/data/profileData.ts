@@ -145,7 +145,7 @@ export const profile: Profile = {
   skills: {
     level: 'Junior-level programmer',
     technical: [
-      'C#', 'Asp.net', 'TypeScript', 'React', 'PL/SQL', 'HTML', 'CSS', 'Blazor', 'Git'
+      'C#', 'SQL', 'PL/SQl', 'c++', 'JavaScript'
     ],
     soft: [
       'Communication', 'Problem Solving', 'Teamwork', 'Time Management', 'Adaptability', 'Mentoring', 'Attention to Detail'
