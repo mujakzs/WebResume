@@ -112,6 +112,12 @@ const ProfileHeader: React.FC<ProfileHeaderProps> = ({ profile }) => {
           variant="outline"
           size="lg"
           className="gap-2 hover:scale-105 cursor-pointer hover:shadow-lg hover:shadow-blue-200 transition-all duration-200 rounded-lg"
+          onClick={() =>
+          window.open(
+            'https://drive.google.com/file/d/1KDuQ5M4cs4LxQYrLjeP3IHp53AXzADbn/view?usp=sharing',
+            '_blank'
+          )
+          }
         >
           <FileUser className="w-4 h-4" />
           View Resume
@@ -121,6 +127,12 @@ const ProfileHeader: React.FC<ProfileHeaderProps> = ({ profile }) => {
           variant="outline"
           size="lg"
           className="gap-2 hover:scale-105 cursor-pointer hover:shadow-lg hover:shadow-blue-200 transition-all duration-200 rounded-lg"
+          onClick={() =>
+          window.open(
+            'https://discord.gg/csharp',
+            '_blank'
+          )
+          }
         >
           <Users className="w-4 h-4" />
           Join community and Connect
